@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List 待辦清單</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>To-Do List 待辦清單</h1>
+    <div id="vm">
+        <div class="addArea">
+            <input type="text" placeholder="請輸入待辦事項" v-model="newText">
+            <input type="date" v-model="newDate">
+            <input type="time" v-model="newTime">
+            <button id="save" @click="addTodo(newText, newDate, newTime)">確定</button>
+        </div>
+        <div class="contentArea">
+            <div class="chooseArea">
+                <button @click="showAll">全部</button>
+                <button @click="showDone">已完成</button>
+                <button @click="showUndone">未完成</button>
+            </div>
+            <ul class="ex-list">
+                <li>
+                    <p class="checked">完成</p>
+                    <p class="txt">待辦事項</p>
+                    <p class="date">日期</p>
+                    <p class="time">時間</p>
+                    <p id="ex-deleted">刪除</p>
+                </li>
+            </ul>
+            <ul class="list">
+                <li v-for="item in todos">
+                    <input type="checkbox" class="checked" v-model="item.completed" @click="completedTodo(item)">
+                    <p class="txt">{{item.todoText}}</p>
+                    <p class="date">{{item.todoDate}}</p>
+                    <p class="time">{{item.todoTime}}</p>
+                    <div id="list-deleted"><button @click="removeTodo(item)">X</button></div>
+                </li>
+            </ul>
+            <ul class="total-list">
+                <p>&ensp;全部&ensp;： {{allTodos.length}} 個事項</p>
+                <p>已完成： {{doneTodos.length}} 個事項</p>
+                <p>未完成： {{undoneTodos.length}} 個事項</p>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="all.js"></script>
+</body>
+
+</html>

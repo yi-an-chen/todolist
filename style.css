@@ -1,0 +1,163 @@
+h1 {
+    text-align: center;
+    margin: 20px 0px 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* addArea - 輸入區 */
+
+.addArea {
+    display: flex;
+    justify-content: center;
+}
+
+.addArea input {
+    width: 20%;
+    height: 30px;
+    margin: 0 15px;
+}
+
+.addArea button {
+    margin: 0 15px;
+    background-color: #666;
+    color: #fff;
+    font-weight: bold;
+    border: unset;
+    border-radius: 15%;
+    padding: 0 15px;
+}
+
+/* chooseArea - 選擇 (全部/已完成/未完成)　*/
+
+.chooseArea {
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 5px #fff solid;
+}
+
+.chooseArea button {
+    margin: 0 30px;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #fff;
+    border: 3px rgb(137, 194, 194) solid;
+    border-radius: 10%;
+}
+
+/* contentArea - 顯示區 */
+
+.contentArea {
+    margin: 30px 100px 0px;
+    border: 3px #aaa solid;
+    background-color: rgba(154, 219, 219, 0.3);
+}
+
+.contentArea li {
+    display: flex;
+    padding: 10px 30px;
+}
+
+.ex-list {
+    background-color: #ccc;
+}
+
+.list li:nth-child(odd) {
+    background-color: #ffd;
+}
+
+.list li:nth-child(even) {
+    background-color: #ddf;
+}
+
+.list button {
+    border: unset;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 50%;
+}
+
+.list li:nth-child(odd) button {
+    background-color: #fd3;
+}
+
+.list li:nth-child(even) button {
+    background-color: #88f;
+}
+
+.txt {
+    flex-basis: 0px;
+    line-height: 1.5;
+    flex-grow: 3;
+}
+
+.checked, .date, .time, #ex-deleted, .list div {
+    flex-basis: 0px;
+    flex-grow: 2;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.contentArea .checked, .contentArea p, .contentArea div {
+    text-align: center;
+    align-self: center;
+}
+
+.list .txt {
+    text-align: left;
+}
+
+.list div {
+    text-align: center;
+}
+
+/* Total */
+
+.total-list {
+    padding: 15px 50px;
+    border-top: 5px #fff solid;
+}
+
+.total-list p {
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* button :hover */
+
+.addArea button:hover, .chooseArea button:hover, .list li button:hover {
+    background-color: #faa;
+}
+
+/* RWD - @media */
+
+@media screen and (max-width:767px) {
+    .addArea {
+        flex-direction: column;
+        align-items: center;
+    }
+    .addArea input {
+        width: 250px;
+        margin: 5px;
+    }
+    .addArea button {
+        margin-top: 10px;
+        padding: 10px 15px;
+    }
+    .chooseArea button {
+        margin: 0 8px;
+        padding: 5px;
+    }
+    .contentArea {
+        margin: 10px 25px;
+    }
+    .contentArea li {
+        padding: 10px 5px;
+    }
+    .txt, .date {
+        flex-grow: 3;
+    }
+    .checked, .time, #ex-deleted, .list div {
+        flex-grow: 2;
+    }
+}
