@@ -9,5 +9,5 @@
 * 框架
   * Vue.js
 * 網頁排版
-  * flex
+  * Flexbox
 * 響應式網頁 (RWD)
