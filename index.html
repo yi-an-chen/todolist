@@ -36,7 +36,7 @@
             <ul class="list">
                 <li v-for="item in todos">
                     <input type="checkbox" class="checked" v-model="item.completed" @click="completedTodo(item)">
-                    <p class="txt">{{item.todoText}}</p>
+                    <p class="txt" v-bind:class="{active: item.completed}">{{item.todoText}}</p>
                     <p class="date">{{item.todoDate}}</p>
                     <p class="time">{{item.todoTime}}</p>
                     <div id="list-deleted"><button @click="removeTodo(item)">X</button></div>
