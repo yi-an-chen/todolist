@@ -60,6 +60,9 @@ h1 {
 }
 
 /* contentArea - 顯示區 */
+.active{
+    text-decoration: line-through;
+}
 
 .contentArea {
     margin: 30px 100px;
