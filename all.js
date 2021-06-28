@@ -8,7 +8,12 @@ let vm = new Vue({
         todos: [],
         allTodos: [],
         doneTodos: [],
-        undoneTodos: []
+        undoneTodos: [],
+        isChosen: {
+            all: false,
+            done: false,
+            undone: false
+        }
     },
     methods: {
         addTodo: function (text, date, time) {
@@ -18,6 +23,10 @@ let vm = new Vue({
 
             this.filter()
 
+            this.isChosen.all = true
+            this.isChosen.done = false
+            this.isChosen.undone = false
+            
             this.newText = ""
             this.newDate = null
             this.newTime = null
@@ -62,12 +71,21 @@ let vm = new Vue({
         },
         showAll: function () {
             this.filter()
+            this.isChosen.all = true
+            this.isChosen.done = false
+            this.isChosen.undone = false
         },
         showDone: function () {
             this.todos = this.doneTodos
+            this.isChosen.all = false
+            this.isChosen.done = true
+            this.isChosen.undone = false
         },
         showUndone: function () {
             this.todos = this.undoneTodos
+            this.isChosen.all = false
+            this.isChosen.done = false
+            this.isChosen.undone = true
         },
     }
 })
