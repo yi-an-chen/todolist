@@ -43,6 +43,9 @@ h1 {
 }
 
 /* chooseArea - 選擇 (全部/已完成/未完成)　*/
+.chosen{
+    background-color: rgb(137, 194, 194)!important;
+}
 
 .chooseArea {
     text-align: center;
@@ -143,7 +146,7 @@ h1 {
 /* button :hover */
 
 .addArea button:hover, .chooseArea button:hover, .list li button:hover {
-    background-color: #faa;
+    background-color: #faa!important;
 }
 
 /* Footer */
