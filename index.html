@@ -20,9 +20,9 @@
         </div>
         <div class="contentArea">
             <div class="chooseArea">
-                <button @click="showAll">全部</button>
-                <button @click="showDone">已完成</button>
-                <button @click="showUndone">未完成</button>
+                <button @click="showAll" v-bind:class="{chosen: isChosen.all}">全部</button>
+                <button @click="showDone" v-bind:class="{chosen: isChosen.done}">已完成</button>
+                <button @click="showUndone" v-bind:class="{chosen: isChosen.undone}">未完成</button>
             </div>
             <ul class="ex-list">
                 <li>
