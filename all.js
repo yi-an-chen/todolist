@@ -40,6 +40,8 @@ let vm = new Vue({
 
             this.todos.splice(this.todos.indexOf(item), 1)
             this.allTodos.splice(result, 1)
+            
+            this.filter()
         },
         completedTodo: function (item) {
             let result = this.allTodos.map(function (value) {
