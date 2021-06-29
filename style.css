@@ -1,11 +1,13 @@
-html, body { /* 外層高度 100% */
+html, body {
+    /* 外層高度 100% */
     height: 100%;
     margin: 0;
 }
-  
-body{
+
+body {
     display: flex;
     flex-direction: column;
+    background-color: rgb(139, 69, 19, 0.2);
 }
 
 h1 {
@@ -15,7 +17,7 @@ h1 {
     font-weight: bold;
 }
 
-#vm{
+#vm {
     flex-grow: 1;
 }
 
@@ -34,7 +36,7 @@ h1 {
 
 .addArea button {
     margin: 0 15px;
-    background-color: #666;
+    background-color: sienna;
     color: #fff;
     font-weight: bold;
     border: unset;
@@ -43,8 +45,9 @@ h1 {
 }
 
 /* chooseArea - 選擇 (全部/已完成/未完成)　*/
-.chosen{
-    background-color: rgb(137, 194, 194)!important;
+
+.chosen {
+    background-color: darksalmon!important;
 }
 
 .chooseArea {
@@ -58,19 +61,20 @@ h1 {
     padding: 10px;
     font-weight: bold;
     background-color: #fff;
-    border: 3px rgb(137, 194, 194) solid;
+    border: 3px darksalmon solid;
     border-radius: 10%;
 }
 
 /* contentArea - 顯示區 */
-.active{
+
+.active {
     text-decoration: line-through;
 }
 
 .contentArea {
     margin: 30px 100px;
     border: 3px #aaa solid;
-    background-color: rgba(154, 219, 219, 0.3);
+    background-color: rgb(255, 255, 255, 0.9);
 }
 
 .contentArea li {
@@ -79,15 +83,16 @@ h1 {
 }
 
 .ex-list {
-    background-color: #ccc;
+    background-color: #555;
+    color: white;
 }
 
 .list li:nth-child(odd) {
-    background-color: #ffd;
+    background-color: rgb(205, 92, 92, 0.7);
 }
 
 .list li:nth-child(even) {
-    background-color: #ddf;
+    background-color: rgb(47, 79, 79, 0.6);
 }
 
 .list button {
@@ -98,11 +103,11 @@ h1 {
 }
 
 .list li:nth-child(odd) button {
-    background-color: #fd3;
+    background-color: rgba(163, 56, 56);
 }
 
 .list li:nth-child(even) button {
-    background-color: #88f;
+    background-color: rgb(47, 79, 79);
 }
 
 .txt {
@@ -144,16 +149,24 @@ h1 {
 }
 
 /* button :hover */
+.chooseArea button:hover{
+    background-color: khaki!important;
+}
 
-.addArea button:hover, .chooseArea button:hover, .list li button:hover {
-    background-color: #faa!important;
+.addArea button:hover, .list li button:hover {
+    background-color: #ffa!important;
+}
+
+.addArea button:hover {
+    color: black;
 }
 
 /* Footer */
-.footer{
+
+.footer {
     width: 100%;
     padding: 20px 0;
-    background-color: #ccc;
+    background-color: rgb(139, 69, 19, 0.3);
     text-align: center;
 }
 
