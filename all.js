@@ -55,8 +55,6 @@ let vm = new Vue({
                 item.completed = false
                 this.allTodos[result].completed = false
             }
-
-            this.filter()
         },
         filter: function () {
             this.todos = []
